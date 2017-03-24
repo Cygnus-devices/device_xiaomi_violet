@@ -79,6 +79,11 @@ on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
 
 on property:sys.boot_completed=1
+    # Configure default schedTune value for foreground/top-app
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.boost 10
+    write /dev/stune/top-app/schedtune.prefer_idle 1
+
     # Set allocstall_threshold to 0
     # Set swappiness to 100
     write /sys/module/vmpressure/parameters/allocstall_threshold 0
