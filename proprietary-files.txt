@@ -401,13 +401,15 @@ vendor/etc/diracmobile.config|7b7d1d38b2ac8234efbfc51baab597136fb87779
 vendor/lib64/libdisplayqos.so|3e95c6aedbfca5132ef75365e0a45a32c79b1fd6
 vendor/lib64/libhdr_tm.so|9977b4ccb6667d990210c1ac980e55325f7e7a50
 vendor/lib64/libqseed3.so|a449d79b912415f542509874b43338b27795a1c3
-vendor/lib64/libsdedrm.so|fa7f9b8076138b49d8a86913ff2d7e883c81ff0c
 vendor/lib64/libsdm-color.so|ee21a5b2489131775cdbc0f616add3d05bf514fb
 vendor/lib64/libsdm-colormgr-algo.so|6d17546d7822803700dc21968f75069d1b7392b1
 vendor/lib64/libsdm-diag.so|3d5c311d7d5d842e5a75e9ae3f9f70ceb00cd1cf
 vendor/lib64/libsdm-disp-vndapis.so|42f536763a2f91dcbae5b4b7214e652283c389d6
 vendor/lib64/libsdmextension.so|21ad9d26b4ade9169da37f72ffc0b43610d49913
 vendor/lib64/libtinyxml2_1.so|621dbc8e3d0529b9ee35393698de82ea006ca7fa
+
+# Display - from NX627J 20201029.204053
+vendor/lib64/libsdedrm.so|582910d21139781ad9e414c35207584f51e035e2
 
 # DPM - from sweet-user 11 RKQ1.200826.002 V12.5.2.0.RKFEUXM
 framework/tcmclient.jar|22858e8bb7e3f956e487dc6764ad8250f118d7ac
