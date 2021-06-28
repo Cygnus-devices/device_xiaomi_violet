@@ -633,7 +633,6 @@ vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
 
 # Listen - from sweet-user 11 RKQ1.200826.002 V12.5.2.0.RKFEUXM
-vendor/lib/hw/sound_trigger.primary.sm6150.so|1881583353158f97196ae4f3c800f472734b0013
 vendor/lib/librice.so|30f281ca3307bee5072c7b1eeea743b466af95ac
 vendor/lib/libsmwrapper.so|a3a0301b270e7bbf832fa6b7d9929400c057ee41
 
