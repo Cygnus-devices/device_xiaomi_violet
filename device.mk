@@ -282,6 +282,7 @@ PRODUCT_ENFORCE_RRO_TARGETS += *
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
+# Perf Configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
@@ -291,9 +292,25 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
     $(LOCAL_PATH)/configs/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml
 
+# Perf Boot Jars
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
+# Perf, Disable the poweropt service
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/perf/poweropt-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service-disable.rc
+
+# Perf Packages
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0 \
+    libpsi.vendor \
+    libtflite \
+    vendor.qti.hardware.servicetracker@1.2.vendor
+
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service
 
 # Protobuf
 PRODUCT_PACKAGES += \
