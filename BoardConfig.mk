@@ -17,17 +17,24 @@ DEVICE_PATH := device/xiaomi/violet
 # Inherit from proprietary files
 include vendor/xiaomi/violet/BoardConfigVendor.mk
 
+BUILD_BROKEN_DUP_RULES := true
+PRODUCT_VENDOR_MOVE_ENABLED := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-2a-dotprod
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := cortex-a55
+TARGET_CPU_ABI2 :=
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := cortex-a76
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-2a
+TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a55
+TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
@@ -87,7 +94,7 @@ LOC_HIDL_VERSION := 4.0
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
-DEVICE_MANIFEST_FILE += hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml
+DEVICE_MANIFEST_FILE += hardware/qcom/media/conf_files/sm6150/c2_manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 ODM_MANIFEST_FILES += $(DEVICE_PATH)/configs/hidl/manifest-qva.xml
 
@@ -110,6 +117,8 @@ BOARD_KERNEL_CMDLINE += loop.max_part=7
 
 BOARD_BOOTIMG_HEADER_VERSION := 1
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 # Input
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 96
@@ -137,6 +146,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
+MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := sm6150
 
 # Power
